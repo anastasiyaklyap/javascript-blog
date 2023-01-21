@@ -9,7 +9,7 @@
 		"init:files": "touch README.md index.html sass/style.scss js/script.js",
 		"test": "npm-run-all test:*",
 		"test:html": "html-validate *.html",
-        "test:js": "eslint js/",
+		"test:js": "eslint js/",
 		"build": "npm-run-all build:* test",
 		"build:sass": "sass --style=compressed --no-source-map sass:css",
 		"build:autoprefixer": "postcss css/*.css --use autoprefixer -d css",
@@ -23,6 +23,8 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"@babel/core": "^7.20.12",
+		"@babel/preset-env": "^7.20.2",
 		"autoprefixer": "10.4.13",
 		"browser-sync": "2.27.11",
 		"eslint": "8.0.1",

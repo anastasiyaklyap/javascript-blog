@@ -121,3 +121,33 @@ body {
 		margin: 0 10px 0 0;
 	}
 }
+
+.tags {
+  li {
+    display: inline;
+    padding-right: 0.3rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .tag-size {
+    &-1 {
+      font-size: 0.6rem;
+    }
+    &-2 {
+      font-size: 0.8rem;
+    }
+    &-3 {
+      font-size: 1rem;
+    }
+    &-4 {
+      font-size: 1.2rem;
+    }
+    &-5 {
+      font-size: 1.4rem;
+    }
+  }
+}
+
