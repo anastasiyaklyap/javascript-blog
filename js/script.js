@@ -144,22 +144,32 @@ const clickHandler = (selector) => {
       const href = item.getAttribute('href');
       const itemName = href.replace(`#${selector}-`, '').replace('-', ' ');
       const activeItems = Array.from(
-        document.querySelectorAll(`a.active[href^="#${selector}-"]`)
+        document.querySelectorAll(`a.active`)
       );
+
       activeItems.map((activeItem) => {
-        activeItem.classList.remove('active');
+        if (
+          !activeItem.getAttribute('href').includes(itemName) &&
+          !activeItem.getAttribute('href').includes(itemName.replace(' ', '-'))
+        ) {
+          activeItem.classList.remove('active');
+        }
       });
       const currentHrefs = Array.from(
         document.querySelectorAll('a[href="' + href + '"]')
       );
-      currentHrefs.map((currentHref) => {
-        currentHref.classList.add('active');
-      });
       generateLeftSideBar(itemName);
+      currentHrefs.map((currentHref) => {
+        if (currentHref.classList.contains('active')) {
+          generateLeftSideBar();
+          currentHref.classList.remove('active');
+        } else {
+          currentHref.classList.add('active');
+        }
+      });
     });
   });
 };
-
 collectArticleData();
 generateRigthSideBarTags();
 generateRigthSideBarAuthors();

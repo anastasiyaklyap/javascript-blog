@@ -150,3 +150,9 @@ body {
     }
   }
 }
+
+.authors a.active,
+.tags a.active {
+  font-weight: bold;
+  color: red;
+}

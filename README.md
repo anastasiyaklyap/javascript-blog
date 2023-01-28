@@ -14,22 +14,22 @@ To initialize the project run
 It will install all dev dependencies, create basic set of files and directories
 ## Build
 
-To build a project run 
+To build a project run
 
 ```bash
   yarn build
 ```
 
-This command will compile `sass` to `css`, parse `css` and add vendor prefixes when needed. Also this command will validate HTML markup. 
+This command will compile `sass` to `css`, parse `css` and add vendor prefixes when needed. Also this command will validate HTML markup.
 ## Build `DEV`
 
-To build a project run 
+To build a project run
 
 ```bash
   yarn build-dev
 ```
 
-This command will compile `sass` to `css`, add vendor prefixes when needed and it will create source map for CSS 
+This command will compile `sass` to `css`, add vendor prefixes when needed and it will create source map for CSS
 ## Watch
 
 To work on a project on local environment run command
@@ -47,3 +47,4 @@ To run tests, run the following command
 ```
 
 This task validates HTML markup
+
